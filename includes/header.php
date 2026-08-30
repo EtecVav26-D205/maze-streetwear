@@ -6,10 +6,9 @@
 
     <nav class="menu">
         <a href="index.php">Início</a>
-        <a href="#">Produtos</a>
-        <a href="#">Coleções</a>
-        <a href="#">Sobre nós</a>
-        <a href="#">Contato</a>
+           <a href="colecao.php">Coleções</a>
+           <a href="promocao.php">Promoções</a>
+     
     </nav>
 
 

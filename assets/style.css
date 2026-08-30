@@ -1,60 +1,28 @@
-.banner {
-    position: relative;
-    width: 100%;
-    height: 600px;
-    overflow: hidden;
-}
-
-.banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.banner-conteudo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    text-align: center;
-    color: white;
-}
-
-.banner-conteudo h1 {
-    font-size: 60px;
-    margin: 0;
-    font-weight: bold;
-}
-
-.banner-conteudo p {
-    font-size: 22px;
-    margin: 15px 0 30px;
-}
-
-.btn-banner {
-    display: inline-block;
-    padding: 14px 30px;
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn-banner:hover {
-    background-color: black;
-    color: white;
-}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
+
+
+
+html {
+    scroll-behavior: smooth;
 }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+
+
 
 .header {
     width: 100%;
@@ -68,10 +36,12 @@ body {
 
     background-color: #231F20;
 }
+
 .logo img {
     width: 120px;
     display: block;
 }
+
 .menu {
     display: flex;
     gap: 35px;
@@ -80,10 +50,317 @@ body {
 .menu a {
     text-decoration: none;
     color: white;
+
     font-size: 15px;
     font-weight: 600;
+
+    transition: 0.3s;
 }
 
 .menu a:hover {
+    opacity: 0.6;
+}
+
+
+
+
+.banner {
+    position: relative;
+
+    width: 100%;
+    height: 600px;
+
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.banner-conteudo {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    color: rgb(255, 146, 164);
+
+    width: 90%;
+}
+
+.banner-conteudo h1 {
+    font-size: 60px;
+    margin: 0;
+
+    font-weight: bold;
+}
+
+.banner-conteudo p {
+    font-size: 22px;
+
+    margin: 15px 0 30px;
+}
+
+
+
+
+.btn-banner {
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    background-color: white;
+    color: black;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.btn-banner:hover {
+    background-color: black;
+    color: white;
+}
+
+
+
+
+.destaques {
+    padding: 80px 50px;
+
+    background-color: #ffffff;
+}
+
+#estilos {
+    scroll-margin-top: 30px;
+}
+
+
+
+
+.titulo-secao {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.titulo-secao h2 {
+    font-size: 45px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.titulo-secao p {
+    font-size: 14px;
+
+    color: #666;
+}
+
+
+
+
+.colecoes {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.colecao {
+    position: relative;
+
+    height: 500px;
+
+    overflow: hidden;
+
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.colecao img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+
+
+
+.colecao-info {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0.45);
+
+    opacity: 0;
+
+    transition: opacity 0.4s ease;
+}
+
+
+
+
+.colecao-info h3 {
+    font-size: 50px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+
+
+
+.colecao-info span {
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+
+
+
+.colecao:hover .colecao-info {
+    opacity: 1;
+}
+
+.colecao:hover img {
+    transform: scale(1.05);
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .header {
+        height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .menu {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .menu a {
+        font-size: 13px;
+    }
+
+
+
+
+    .banner {
+        height: 500px;
+    }
+
+    .banner-conteudo h1 {
+        font-size: 45px;
+    }
+
+    .banner-conteudo p {
+        font-size: 18px;
+    }
+
+
+
+
+    .destaques {
+        padding: 60px 20px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 38px;
+    }
+
+
+
+
+    .colecoes {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .colecao {
+        height: 450px;
+    }
+
+}
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background-color: #231F20;
+    color: white;
+
+    text-align: center;
+
+    padding: 30px 20px;
+}
+
+.footer p {
+    font-size: 12px;
+    margin: 8px 0;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+    margin: 15px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
     opacity: 0.6;
 }
