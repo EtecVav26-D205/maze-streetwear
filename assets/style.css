@@ -1,0 +1,89 @@
+.banner {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-conteudo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    color: white;
+}
+
+.banner-conteudo h1 {
+    font-size: 60px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.banner-conteudo p {
+    font-size: 22px;
+    margin: 15px 0 30px;
+}
+
+.btn-banner {
+    display: inline-block;
+    padding: 14px 30px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-banner:hover {
+    background-color: black;
+    color: white;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 50px;
+
+    background-color: #231F20;
+}
+.logo img {
+    width: 120px;
+    display: block;
+}
+.menu {
+    display: flex;
+    gap: 35px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.menu a:hover {
+    opacity: 0.6;
+}
