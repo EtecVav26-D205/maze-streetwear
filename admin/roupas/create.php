@@ -1,7 +1,7 @@
 <?php
 
 require '../../config/conexao.php';
-require '../../includes/header.php';
+require '../header-adm.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -28,44 +28,73 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<h2>Adicionar Produto</h2>
+<div class="admin-card">
 
-<form method="POST">
+    <h1>Adicionar Produto</h1>
 
-    <input
-        type="text"
-        name="nome"
-        placeholder="Nome da roupa"
-        required
-    >
+    <p class="admin-subtitle">
+        Cadastre uma nova peça da Maze Streetwear.
+    </p>
 
-    <input
-        type="text"
-        name="categoria"
-        placeholder="Categoria"
-        required
-    >
+    <form method="POST" class="produto-form">
 
-    <input
-        type="number"
-        name="preco"
-        placeholder="Preço"
-        step="0.01"
-        required
-    >
+        <div class="form-group">
+            <label>Nome do produto</label>
+            <input
+                type="text"
+                name="nome"
+                placeholder="Ex: Camiseta Oversized Maze"
+                required
+            >
+        </div>
 
-    <input
-        type="number"
-        name="estoque"
-        placeholder="Estoque"
-        min="0"
-        required
-    >
+        <div class="form-group">
+            <label>Categoria</label>
 
-    <button type="submit">
-        Salvar
-    </button>
+            <select name="categoria" required>
+                <option value="">Selecione uma categoria</option>
+                <option value="Camiseta">Camiseta</option>
+                <option value="Moletom">Moletom</option>
+                <option value="Calça">Calça</option>
+                <option value="Boné">Boné</option>
+            </select>
 
-</form>
+        </div>
 
-<?php require '../../includes/footer.php'; ?>
+        <div class="form-group">
+            <label>Preço</label>
+
+            <input
+                type="number"
+                name="preco"
+                placeholder="89.90"
+                step="0.01"
+                min="0"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Estoque</label>
+
+            <input
+                type="number"
+                name="estoque"
+                placeholder="10"
+                min="0"
+                required
+            >
+        </div>
+
+        <button type="submit" class="btn-salvar">
+            SALVAR PRODUTO
+        </button>
+
+    </form>
+
+    <a href="read.php" class="voltar">
+        Voltar para produtos
+    </a>
+
+</div>
+</div> <?php require '../../includes/footer.php'; ?>
