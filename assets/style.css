@@ -361,3 +361,482 @@ h3 {
 .footer-links a:hover {
     opacity: 0.6;
 }
+.admin-container {
+    min-height: calc(100vh - 90px);
+    padding: 60px 7%;
+    background-color: #f5f5f5;
+    }
+    
+    .admin-container h1 {
+    font-size: 48px;
+    letter-spacing: 2px;
+    color: #231F20;
+    margin-bottom: 5px;
+    }
+    
+    .admin-subtitle {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 35px;
+    }
+    
+    .admin-card {
+    max-width: 650px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 45px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    }
+    
+    .admin-card h1 {
+    text-align: center;
+    }
+    
+    .produto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    }
+    
+    .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    }
+    
+    .form-group label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #231F20;
+    }
+    
+    .form-group input,
+    .form-group select {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    outline: none;
+    }
+    
+    .form-group input:focus,
+    .form-group select:focus {
+    border-color: #231F20;
+    background-color: white;
+    }
+    
+    .btn-salvar {
+    border: none;
+    padding: 16px;
+    background-color: #231F20;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    }
+    
+    .btn-salvar:hover {
+    background-color: #e892a3;
+    color: #231F20;
+    }
+    
+    .voltar {
+    display: block;
+    margin-top: 25px;
+    text-align: center;
+    color: #231F20;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    }
+    
+    .voltar:hover {
+    text-decoration: underline;
+    }
+    
+    .produtos-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    }
+    
+    .btn-adicionar {
+    display: inline-block;
+    padding: 14px 22px;
+    background-color: #231F20;
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    }
+    
+    .btn-adicionar:hover {
+    background-color: #e892a3;
+    color: #231F20;
+    }
+    
+    .tabela-container {
+    background-color: white;
+    overflow-x: auto;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    }
+    
+    .tabela-produtos {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 750px;
+    }
+    
+    .tabela-produtos th {
+    background-color: #231F20;
+    color: white;
+    padding: 18px 20px;
+    text-align: left;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    }
+    
+    .tabela-produtos td {
+    padding: 18px 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 13px;
+    color: #444;
+    }
+    
+    .tabela-produtos tbody tr:hover {
+    background-color: #fafafa;
+    }
+    
+    .nome-produto {
+    font-weight: 700;
+    color: #231F20 !important;
+    }
+    
+    .categoria {
+    display: inline-block;
+    padding: 6px 10px;
+    background-color: #f1dce0;
+    color: #231F20;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    }
+    
+    .disponivel {
+    color: #27734d;
+    font-size: 11px;
+    font-weight: 600;
+    }
+    
+    .esgotado {
+    color: #c0392b;
+    font-size: 11px;
+    font-weight: 600;
+    }
+    
+    .acoes {
+    white-space: nowrap;
+    }
+    
+    .btn-editar,
+    .btn-excluir {
+    display: inline-block;
+    padding: 8px 12px;
+    margin-right: 5px;
+    text-decoration: none;
+    font-size: 9px;
+    font-weight: 700;
+    }
+    
+    .btn-editar {
+    background-color: #231F20;
+    color: white;
+    }
+    
+    .btn-editar:hover {
+    background-color: #444;
+    }
+    
+    .btn-excluir {
+    background-color: #f1d5d5;
+    color: #a32929;
+    }
+    
+    .btn-excluir:hover {
+    background-color: #a32929;
+    color: white;
+    }
+    
+    .sem-produtos {
+    background-color: white;
+    text-align: center;
+    padding: 80px 30px;
+    }
+    
+    .sem-produtos h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+    }
+    
+    .sem-produtos p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 25px;
+    }
+    
+    @media (max-width: 768px) {
+    
+    .admin-container {
+        padding: 40px 20px;
+    }
+    
+    .admin-container h1 {
+        font-size: 38px;
+    }
+    
+    .admin-card {
+        padding: 30px 20px;
+    }
+    
+    .produtos-topo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .btn-adicionar {
+        width: 100%;
+        text-align: center;
+    }
+    
+    
+    }
+    @media (max-width: 768px) {
+
+        .admin-container {
+            padding: 40px 20px;
+        }
+        
+        .admin-container h1 {
+            font-size: 38px;
+        }
+        
+        .admin-card {
+            padding: 30px 20px;
+        }
+        
+        .produtos-topo {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        
+        .btn-adicionar {
+            width: 100%;
+            text-align: center;
+        }
+        
+        }
+        .login-body {
+            min-height: 100vh;
+            background-color: #231F20;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            padding: 20px;
+            
+            
+            }
+            
+            .login-container {
+            width: 100%;
+            max-width: 430px;
+            }
+            
+            .login-card {
+            background-color: #ffffff;
+            
+            padding: 50px 45px;
+            
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+            
+            
+            }
+            
+            .login-card h1 {
+            text-align: center;
+            
+            font-size: 65px;
+            
+            letter-spacing: 5px;
+            
+            color: #231F20;
+            
+            margin: 0;
+            
+            
+            }
+            
+            .login-subtitle {
+            text-align: center;
+            
+            font-size: 11px;
+            
+            font-weight: 700;
+            
+            letter-spacing: 3px;
+            
+            color: #e892a3;
+            
+            margin-bottom: 40px;
+            
+            
+            }
+            
+            .login-card .form-group {
+            margin-bottom: 20px;
+            }
+            
+            .login-card .form-group label {
+            display: block;
+            
+            margin-bottom: 8px;
+            
+            font-size: 11px;
+            
+            font-weight: 700;
+            
+            text-transform: uppercase;
+            
+            letter-spacing: 1px;
+            
+            color: #231F20;
+            
+            
+            }
+            
+            .login-card .form-group input {
+            width: 100%;
+            
+            padding: 15px;
+            
+            border: 1px solid #ddd;
+            
+            background-color: #fafafa;
+            
+            font-family: 'Montserrat', sans-serif;
+            
+            font-size: 13px;
+            
+            outline: none;
+            
+            transition: 0.3s;
+            
+            
+            }
+            
+            .login-card .form-group input:focus {
+            border-color: #231F20;
+            
+            background-color: #ffffff;
+            
+            
+            }
+            
+            .btn-login {
+            width: 100%;
+            
+            padding: 16px;
+            
+            border: none;
+            
+            background-color: #231F20;
+            
+            color: #ffffff;
+            
+            font-family: 'Montserrat', sans-serif;
+            
+            font-size: 12px;
+            
+            font-weight: 700;
+            
+            letter-spacing: 2px;
+            
+            cursor: pointer;
+            
+            transition: 0.3s;
+            
+            
+            }
+            
+            .btn-login:hover {
+            background-color: #e892a3;
+            
+            color: #231F20;
+            
+            
+            }
+            
+            .login-erro {
+            padding: 12px;
+            
+            margin-bottom: 20px;
+            
+            background-color: #f8dddd;
+            
+            color: #a32929;
+            
+            text-align: center;
+            
+            font-size: 12px;
+            
+            font-weight: 600;
+            
+            
+            }
+            
+            .voltar-loja {
+            display: block;
+            
+            margin-top: 25px;
+            
+            text-align: center;
+            
+            color: #777;
+            
+            text-decoration: none;
+            
+            font-size: 11px;
+            
+            font-weight: 600;
+            
+            
+            }
+            
+            .voltar-loja:hover {
+            color: #231F20;
+            }
+            
+            @media (max-width: 500px) {
+            
+            .login-card {
+                padding: 40px 25px;
+            }
+            
+            .login-card h1 {
+                font-size: 55px;
+            }
+            
+            
+            }
