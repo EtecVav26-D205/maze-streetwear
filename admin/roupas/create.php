@@ -10,22 +10,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $preco = $_POST['preco'];
     $estoque = $_POST['estoque'];
 
+
+    $imagem = $_FILES['imagem']['name'];
+
+
+    $pasta = "../../img/";
+
+
+    move_uploaded_file(
+        $_FILES['imagem']['tmp_name'],
+        $pasta . $imagem
+    );
+
+
     $sql = $conexao->prepare(
         "INSERT INTO produtos
-        (nome, categoria, preco, estoque)
+        (nome, categoria, preco, estoque, imagem)
         VALUES
-        (:nome, :categoria, :preco, :estoque)"
+        (:nome, :categoria, :preco, :estoque, :imagem)"
     );
 
     $sql->execute([
         ':nome' => $nome,
         ':categoria' => $categoria,
         ':preco' => $preco,
-        ':estoque' => $estoque
+        ':estoque' => $estoque,
+        ':imagem' => $imagem
     ]);
 
     echo "Produto cadastrado com sucesso!";
 }
+
 ?>
 
 <div class="admin-card">
@@ -36,32 +51,59 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         Cadastre uma nova peça da Maze Streetwear.
     </p>
 
-    <form method="POST" class="produto-form">
+    <form
+        method="POST"
+        class="produto-form"
+        enctype="multipart/form-data"
+    >
 
         <div class="form-group">
+
             <label>Nome do produto</label>
+
             <input
                 type="text"
                 name="nome"
                 placeholder="Ex: Camiseta Oversized Maze"
                 required
             >
+
         </div>
 
+
         <div class="form-group">
+
             <label>Categoria</label>
 
             <select name="categoria" required>
-                <option value="">Selecione uma categoria</option>
-                <option value="Camiseta">Camiseta</option>
-                <option value="Moletom">Moletom</option>
-                <option value="Calça">Calça</option>
-                <option value="Boné">Boné</option>
+
+                <option value="">
+                    Selecione uma categoria
+                </option>
+
+                <option value="Camiseta">
+                    Camiseta
+                </option>
+
+                <option value="Moletom">
+                    Moletom
+                </option>
+
+                <option value="Calça">
+                    Calça
+                </option>
+
+                <option value="Boné">
+                    Boné
+                </option>
+
             </select>
 
         </div>
 
+
         <div class="form-group">
+
             <label>Preço</label>
 
             <input
@@ -72,9 +114,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 min="0"
                 required
             >
+
         </div>
 
+
         <div class="form-group">
+
             <label>Estoque</label>
 
             <input
@@ -84,7 +129,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 min="0"
                 required
             >
+
         </div>
+
+
+        <div class="form-group">
+
+            <label>Imagem do produto</label>
+
+            <input
+                type="file"
+                name="imagem"
+                accept="image/*"
+                required
+            >
+
+        </div>
+
 
         <button type="submit" class="btn-salvar">
             SALVAR PRODUTO
@@ -92,9 +153,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     </form>
 
+
     <a href="read.php" class="voltar">
         Voltar para produtos
     </a>
 
 </div>
-</div> <?php require '../../includes/footer.php'; ?>
+
+</div>
+
+<?php require '../../includes/footer.php'; ?>
