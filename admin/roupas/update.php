@@ -1,27 +1,79 @@
-<?php require '../../config/conexao.php';
+<?php
+
+require '../../config/conexao.php';
+
 $id = $_GET['id'] ?? null;
+
 if (!$id) {
     header("Location: read.php");
     exit;
 }
-$sql = $conexao->prepare("SELECT * FROM produtos WHERE id = :id");
-$sql->execute([':id' => $id]);
+
+$sql = $conexao->prepare(
+    "SELECT * FROM produtos WHERE id = :id"
+);
+
+$sql->execute([
+    ':id' => $id
+]);
+
 $produto = $sql->fetch(PDO::FETCH_ASSOC);
+
 if (!$produto) {
     echo "Produto não encontrado.";
     exit;
 }
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
     $nome = $_POST['nome'];
     $categoria = $_POST['categoria'];
     $preco = $_POST['preco'];
     $estoque = $_POST['estoque'];
-    $sql = $conexao->prepare("UPDATE produtos SET nome = :nome, categoria = :categoria, preco = :preco, estoque = :estoque WHERE id = :id");
-    $sql->execute([':nome' => $nome, ':categoria' => $categoria, ':preco' => $preco, ':estoque' => $estoque, ':id' => $id]);
+
+    $imagem = $produto['imagem'];
+
+    if (!empty($_FILES['imagem']['name'])) {
+
+        $imagem = $_FILES['imagem']['name'];
+
+        $pasta = "../../img/";
+
+        move_uploaded_file(
+            $_FILES['imagem']['tmp_name'],
+            $pasta . $imagem
+        );
+    }
+
+    $sql = $conexao->prepare(
+        "UPDATE produtos
+         SET nome = :nome,
+             categoria = :categoria,
+             preco = :preco,
+             estoque = :estoque,
+             imagem = :imagem
+         WHERE id = :id"
+    );
+
+    $sql->execute([
+        ':nome' => $nome,
+        ':categoria' => $categoria,
+        ':preco' => $preco,
+        ':estoque' => $estoque,
+        ':imagem' => $imagem,
+        ':id' => $id
+    ]);
+
     header("Location: read.php");
     exit;
 }
-require '../../includes/header.php'; ?> <div class="admin-container">
+
+require '../../includes/header.php';
+
+?>
+
+<div class="admin-container">
+
     <div class="admin-card">
 
         <h1>Editar Produto</h1>
@@ -30,19 +82,25 @@ require '../../includes/header.php'; ?> <div class="admin-container">
             Altere as informações do produto.
         </p>
 
-        <form method="POST" class="produto-form">
+        <form 
+            method="POST" 
+            class="produto-form"
+            enctype="multipart/form-data"
+        >
 
             <div class="form-group">
 
                 <label>Nome do produto</label>
 
-                <input
-                    type="text"
+                <input 
+                    type="text" 
                     name="nome"
                     value="<?= htmlspecialchars($produto['nome']) ?>"
-                    required>
+                    required
+                >
 
             </div>
+
 
             <div class="form-group">
 
@@ -70,32 +128,50 @@ require '../../includes/header.php'; ?> <div class="admin-container">
 
             </div>
 
+
             <div class="form-group">
 
                 <label>Preço</label>
 
-                <input
+                <input 
                     type="number"
                     name="preco"
                     value="<?= $produto['preco'] ?>"
                     step="0.01"
                     min="0"
-                    required>
+                    required
+                >
 
             </div>
+
 
             <div class="form-group">
 
                 <label>Estoque</label>
 
-                <input
+                <input 
                     type="number"
                     name="estoque"
                     value="<?= $produto['estoque'] ?>"
                     min="0"
-                    required>
+                    required
+                >
 
             </div>
+
+
+            <div class="form-group">
+
+                <label>Imagem do produto</label>
+
+                <input 
+                    type="file"
+                    name="imagem"
+                    accept="image/*"
+                >
+
+            </div>
+
 
             <button type="submit" class="btn-salvar">
                 SALVAR ALTERAÇÕES
@@ -103,10 +179,13 @@ require '../../includes/header.php'; ?> <div class="admin-container">
 
         </form>
 
+
         <a href="read.php" class="voltar">
             ← Voltar para produtos
         </a>
 
     </div>
 
-</div> <?php require '../../includes/footer.php'; ?>
+</div>
+
+<?php require '../../includes/footer.php'; ?>
