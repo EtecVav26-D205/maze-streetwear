@@ -23,7 +23,7 @@ A paleta de cores da marca será minimalista, moderna e versátil.
 ## ⚪ Branco
 Transmitindo limpeza visual e destaque para os elementos do site.
 
-## 🤍 Off-White
+## 🤍 Rosa
 Utilizado para criar um visual mais sofisticado e moderno, muito presente em marcas streetwear atuais.
 
 ## ⚫ Preto
