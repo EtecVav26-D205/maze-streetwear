@@ -53,17 +53,17 @@
 
         <div class="colecoes">
 
-    <a href="#" class="colecao">
+    <a href="catalogo.php" class="colecao">
         <img src="img/camisa-os1.jpg" alt="Coleção Oversized">
 
         <div class="colecao-info">
-            <h3>OVERSIZED</h3>
+            <h3>Camisetas</h3>
             <span>VER COLEÇÃO →</span>
         </div>
     </a>
 
 
-    <a href="#" class="colecao">
+    <a href="catalogo.php" class="colecao">
         <img src="img/moletom-os1.jpg" alt="Coleção Moletom">
 
         <div class="colecao-info">
@@ -73,7 +73,7 @@
     </a>
 
 
-    <a href="#" class="colecao">
+    <a href="catalogo.php" class="colecao">
         <img src="img/bone.jpg" alt="Coleção Bonés">
 
         <div class="colecao-info">
@@ -83,7 +83,7 @@
     </a>
 
 
-    <a href="#" class="colecao">
+    <a href="catalogo.php" class="colecao">
         <img src="img/calca.jpg" alt="Coleção Calças">
 
         <div class="colecao-info">
