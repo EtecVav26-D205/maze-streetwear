@@ -18,9 +18,16 @@
 
     <nav class="menu">
         <a href="/maze-streetwear/index.php">Início</a>
-        <a href="/maze-streetwear/colecao.php">Coleções</a>
-        <a href="/maze-streetwear/promocao.php">Promoções</a>
+        <a href="/maze-streetwear/catalogo.php">Coleções</a>
         <a href="/maze-streetwear/admin/index.php">Logar</a>
     </nav>
+
+    <div class="acoes">
+
+    <a href="/maze-streetwear/carrinho/carrinho.php">
+        🛒
+    </a>
+
+</div>
 
 </header>
