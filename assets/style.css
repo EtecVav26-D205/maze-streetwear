@@ -866,6 +866,22 @@ h3 {
 .produto {
     width: 100%;
     min-width: 0;
+    transition: transform ease 0.5s;
+}
+
+.produto:hover{
+    transform: scale(1.01);
+}
+
+.fundo-produto{
+    background-color: rgb(221, 221, 221);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 5px 5px black;
+}
+
+.fundo-produto img{
+    border-radius: 10px;
 }
 
 .produto img {

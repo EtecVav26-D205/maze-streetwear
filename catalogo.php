@@ -56,18 +56,19 @@ $bones = $conexao->query(
 
 
 
-<section class="destaques" id="estilos">
+<section class="banner">
 
-    <div class="titulo-secao">
+<img src="img/banner2.jpg" alt="Nova coleção">
 
-        <h2>COLEÇÕES</h2>
+<div class="banner-conteudo">
 
-        <p>Confira nossas coleções</p>
+    <h1>Coleções</h1>
 
-    </div>
+    <p>Confira nossas coleções</p>
+
+</div>
 
 </section>
-
 
 
 
@@ -80,6 +81,7 @@ $bones = $conexao->query(
         <?php foreach ($camisetas as $produto): ?>
 
             <div class="produto">
+                <div class="fundo-produto">
 
                 <img
                     src="img/<?= htmlspecialchars($produto['imagem']) ?>"
@@ -106,7 +108,7 @@ $bones = $conexao->query(
                 </div>
 
             </div>
-
+</div>
         <?php endforeach; ?>
 
     </div>
@@ -125,7 +127,7 @@ $bones = $conexao->query(
         <?php foreach ($moletons as $produto): ?>
 
             <div class="produto">
-
+            <div class="fundo-produto">
                 <img
                     src="img/<?= htmlspecialchars($produto['imagem']) ?>"
                     alt="<?= htmlspecialchars($produto['nome']) ?>"
@@ -149,7 +151,7 @@ $bones = $conexao->query(
                     </a>
 
                 </div>
-
+            </div>
             </div>
 
         <?php endforeach; ?>
@@ -170,7 +172,7 @@ $bones = $conexao->query(
         <?php foreach ($calcas as $produto): ?>
 
             <div class="produto">
-
+            <div class="fundo-produto">
                 <img
                     src="img/<?= htmlspecialchars($produto['imagem']) ?>"
                     alt="<?= htmlspecialchars($produto['nome']) ?>"
@@ -196,7 +198,7 @@ $bones = $conexao->query(
                 </div>
 
             </div>
-
+            </div>
         <?php endforeach; ?>
 
     </div>
@@ -215,7 +217,7 @@ $bones = $conexao->query(
         <?php foreach ($bones as $produto): ?>
 
             <div class="produto">
-
+            <div class="fundo-produto">
                 <img
                     src="img/<?= htmlspecialchars($produto['imagem']) ?>"
                     alt="<?= htmlspecialchars($produto['nome']) ?>"
@@ -241,7 +243,7 @@ $bones = $conexao->query(
                 </div>
 
             </div>
-
+            </div>
         <?php endforeach; ?>
 
     </div>

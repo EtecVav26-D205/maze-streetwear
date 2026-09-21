@@ -19,15 +19,16 @@
     <nav class="menu">
         <a href="/maze-streetwear/index.php">Início</a>
         <a href="/maze-streetwear/catalogo.php">Coleções</a>
-        <a href="/maze-streetwear/admin/index.php">Logar</a>
-    </nav>
+        <a href="/maze-streetwear/admin/index.php">Login</a>
+        <a href="/maze-streetwear/admin/index.php">Admnin</a>
 
-    <div class="acoes">
+    
+
 
     <a href="/maze-streetwear/carrinho/carrinho.php">
         🛒
     </a>
+</nav>
 
-</div>
 
 </header>
