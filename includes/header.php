@@ -19,7 +19,6 @@
     <nav class="menu">
         <a href="/maze-streetwear/index.php">Início</a>
         <a href="/maze-streetwear/catalogo.php">Coleções</a>
-        <a href="/maze-streetwear/admin/index.php">Login</a>
         <a href="/maze-streetwear/admin/index.php">Admnin</a>
 
     
